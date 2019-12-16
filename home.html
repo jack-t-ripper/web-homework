@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta lang="utf-8">
+    <title>主页</title>
+    <link rel="stylesheet" type="text/css" href="card.css" />
+    <link rel="stylesheet" type="text/css" href="layout.css" />
+    <style>
+        #PhotoWall {
+            background-repeat: no-repeat;
+            /* background-size:100% 100%; */
+            background-size: cover;
+            background-attachment: fixed;
+            display: block;
+            width: 100%;
+            /* width: 100%; */
+            height: auto;
+            /* height: 100%; */
+            margin: 0;
+            padding: 0;
+            /* margin-bottom: 30px; */
+        }
+
+        .GBody>h1 {
+            background-color: antiquewhite;
+            text-align: center;
+            margin: 40px;
+            border-bottom: #111;
+            border-bottom-width: 3px;
+            border-bottom-style: dashed;
+        }
+
+        
+    </style>
+
+    <script>
+
+    </script>
+
+</head>
+
+<body>
+    <div class="GridContainer">
+        <div class="GLogo">
+            <img src="../../res/logo.png">
+        </div>
+        <div class="GHeader">
+            <nav>
+                <ul>
+                <li><a href="./home.html">主页</a></li>
+                <li><a href="./profile.html">学院概况</a></li>
+                <li><a href="./major.html">开设专业</a></li>
+                <li><a href="./news.html">新闻</a></li>
+                <li class="right"><a href="./register_and_login1.html">登录</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="GBody">
+            <!-- 640 200 -->
+            <img src="../../res/tl-2.png" id="PhotoWall">
+            <h1>新闻</h1>
+            <div class="ContentContainer">
+                <div class="Card">
+                    <div class="Image" style="background-image: url(../../res/tl-1.png);"></div>
+                    <div class="Text">
+                        <p>Text in here</p>
+                    </div>
+                </div>
+                <div class="Card">
+                    <div class="Image" style="background-image: url(../../res/tl-2.png);"></div>
+                    <div class="Text">
+                        <p>Text in here</p>
+                    </div>
+                </div>
+                <div class="Card">
+                    <div class="Image" style="background-image: url(../../res/tl-3.png);"></div>
+                    <div class="Text">
+                        <p>Text in here</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="GFooter">
+            <!-- <a>版权所有 2019 东北林业大学信息与计算机工程学院  技术支持：数建办</a> -->
+            东北林业大学<br>
+            软件工程专业 2019&copy;
+        </div>
+    </div>
+
+    <script>
+        var lb = document.getElementById("PhotoWall")
+        var num = 1;
+        // 自动换图
+        setInterval(function () {
+            num++;
+            if (num == 4) {
+                num = 1;
+            }
+            lb.src = "../../res/tl-" + num + ".png"
+            // console.log(num)
+        }, 1000)
+        // var left = document.getElementById("left")
+        // var right = document.getElementById("right")
+        // // 点击左箭头换图
+        // left.onclick = function () {
+        //     num--;
+        //     if (num == 0) {
+        //         num = 1;
+        //     }
+        //     lb.src = "image/" + num + ".png"
+        // }
+        // // 点击右键换箭头
+        // right.onclick = function () {
+        //     num++;
+        //     if (num == 5) {
+        //         num = 4;
+        //     }
+        //     lb.src = "image/" + num + ".png"
+        // }
+        // // 点击圆点换图
+        // var allLi = document.getElementsByTagName('ul')[0].getElementsByTagName("li");
+        // for (var i = 0; i < allLi.length; i++) {
+        //     // 给每个li元素赋值，每循环一次，i+1;
+        //     allLi[i].index = i;
+        //     allLi[i].onclick = function () {
+        //         // li的索引是从0开始的，所以要+1
+        //         var num = this.index + 1;
+        //         lb.src = "image/" + num + ".png"
+        //     }
+        // }
+    </script>
+</body>
+
+</html>
